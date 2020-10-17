@@ -70,8 +70,18 @@ class LeNetModel():
 
         return loss_hist, correct_hist
 
+    def predict_logprobs(self, X):
+        is_not_batch = (len(X.shape) == 3)
+        if is_not_batch:
+            X = X.unsqueeze(0)
+        logprobs = self.net(X.to(self.device))
+
+        if is_not_batch:
+            return logprobs.squeeze(0)
+        return logprobs
+
     def predict(self, X):
-        return torch.argmax(self.net(X.to(self.device)), dim=1)
+        return torch.argmax(self.predict_logprobs(X), dim=-1)
 
     def save_model(self, path=os.path.join("generated", "LeNet.torch")):
         state_dict = self.net.state_dict()

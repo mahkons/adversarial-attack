@@ -1,4 +1,4 @@
 # adversarial-attack
-Based on [Intriguing properties of neural networks](https://arxiv.org/abs/1312.6199)
+Iterative least likely method from [Adversarial examples in the physical world](https://arxiv.org/pdf/1607.02533.pdf)
 
 # Installation

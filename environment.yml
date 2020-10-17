@@ -2,8 +2,10 @@ name: adversarial-attack
 
 channels:
   - conda-forge
+  - pytorch
 
 dependencies:
   - python=3.9
-  - torch=1.6.0
+  - pytorch=1.6.0
   - torchvision=0.7
+  - matplotlib=3.3.2
