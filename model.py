@@ -2,7 +2,6 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import os
-from tqdm import tqdm
 
 # LeNet model definition
 # with MaxPool layers and ReLU activation 

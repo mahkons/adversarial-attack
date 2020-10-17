@@ -5,7 +5,8 @@ channels:
   - pytorch
 
 dependencies:
-  - python=3.9
+  - python=3.8
+  - numpy=1.19.1
   - pytorch=1.6.0
   - torchvision=0.7
   - matplotlib=3.3.2
